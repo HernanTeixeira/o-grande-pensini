@@ -15,13 +15,42 @@
 
 <body>
 
+    <div id="victory" class="w-100 h-100 bg-primary position-absolute" style="z-index: 100;">
+        <div class="row w-100 h-100 p-0 m-0 d-none">
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+            <div class="col-3 p-0 m-0 block"></div>
+        </div>
+    </div>
+
     <div class="jumbotron">
         <h1 class="display-4">O Grande Pensini</h1>
         <p class="lead">Bem-vindo, incauto visitante. Permita-me que eu, o Grande Pensini, adivinhe o número em que está
             a pensar.</p>
         <hr class="my-4">
-        <p>Para que este grande feito aconteça. peço-lhe que pense num número em 1 e 200</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <p>Para que este grande feito aconteça. peço-lhe que pense num número em <span id="minValue">1</span> e <span
+                id="maxValue">200</span> </p>
     </div>
 
     <main class="container">
@@ -30,7 +59,7 @@
                 <p>O numero em que esta a pensar é</p>
             </div>
             <div class="col-12">
-                <h1>000</h1>
+                <h1 id="guess">000</h1>
             </div>
             <div class="col-12">
                 <p>O meu palpite está</p>
@@ -39,13 +68,14 @@
 
         <div class="row text-center">
             <div class="col-lg-4">
-                <button type="button" class="btn btn-primary w-100">Acima</button>
+                <button type="button" class="btn btn-primary w-100" onclick="onButtonHigherPressed()">Acima</button>
             </div>
             <div class="col-lg-4">
-                <button type="button" class="btn btn-danger w-100">Abaixo</button>
+                <button type="button" class="btn btn-danger w-100" onclick="onButtonLowerPressed()">Abaixo</button>
             </div>
             <div class="col-lg-4">
-                <button type="button" class="btn btn-success w-100">Na Mouche!</button>
+                <button type="button" class="btn btn-success w-100" onclick="onButtonSuccessPressed()">Na
+                    Mouche!</button>
             </div>
 
         </div>
@@ -59,7 +89,7 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
-
+    <script src="pensini.js"></script>
 </body>
 
 </html>
