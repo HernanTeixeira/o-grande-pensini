@@ -17,15 +17,15 @@ let interval = undefined;
 let changeCallCount = 0;
 
 let change = function () {
-    let colors = ['#000000', '#1F1F1F', '#3D3D3D', '#505050', '#6B6B6B', '#858585', '#929292', '#B8B8B8']
+    let colors = ['#000000', '#1F1F1F', '#3D3D3D', '#505050', '#6B6B6B', '#858585', '#929292', '#B8B8B8'];
 
     changeCallCount++;
     if(changeCallCount > 100) {
         clearInterval(interval);
         changeCallCount = 0;
 
-        window.location.reload;
-    }
+        window.location.reload();
+    };
 
     ledboard.forEach(function (x) {
         x.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
@@ -75,6 +75,8 @@ let main = function () {
     guessValueElement.innerHTML = guess;
 
    writeGuessToHTML();
+   
+   setInterval(change,100);
 }
 
 main();
